@@ -9,13 +9,10 @@ const resContract = new web3.eth.Contract(
     "0xC3FB71fE8cA687fd6a5bf1aE66eB29dBB1fEcc6a"
 );
 
-let address;
+const file = process.argv[2];
+const token = process.argv[3];
 
-
-
-const token = process.argv[2];
-
-resContract.methods.AccessFiles("0x809DbEa3428a23889E9C03D20D631711b2EbC1ED").send({ from: "0x809DbEa3428a23889E9C03D20D631711b2EbC1ED" })
+resContract.methods.AddFiles(file).send({ from: "0x809DbEa3428a23889E9C03D20D631711b2EbC1ED" })
     .then(function (receipt) {
         console.log(receipt);
     })
