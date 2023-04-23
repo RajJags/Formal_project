@@ -1,8 +1,8 @@
 const Web3 = require("web3");
-const Contract = require("@truffle/contract");
 const resContractJson = require("../../client/src/contracts/ResourceManagement.json");
 const web3 = new Web3("http://localhost:7545");
 const axios = require('axios');
+const uploadFile = require('./cloudstorage.js');
 
 const resContract = new web3.eth.Contract(
     resContractJson.abi,
@@ -29,4 +29,8 @@ resContract.methods.AddFiles(file).send({ from: "0x809DbEa3428a23889E9C03D20D631
         .catch(function (error) {
             console.log(error);
         }));
+
+const localFilePath = '../../client/Files/text.txt';
+
+uploadFile.uploadFileToBlobStorage(localFilePath, "text");
 
