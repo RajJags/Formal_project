@@ -18,8 +18,4 @@ contract ResourceManagement {
     function AddFiles(string memory file) public {
         UserData[msg.sender].ipfsHash.push(file);
     }
-
-    function mapFiles(string memory files) public {
-        UserData[msg.sender].ipfsHash.push(files);
-    }
 }

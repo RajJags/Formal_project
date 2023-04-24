@@ -51,6 +51,14 @@ contract Auth {
         return user[msg.sender].isUserLoggedIn;
     }
 
+    function deactivateAccount(address _address) public returns (bool) {
+        require(msg.sender == owner, "Only owner can deactivate account");
+        require(user[_address].addr == _address, "User does not exist");
+        usernames[user[_address].username] = 0;
+        delete user[_address];
+        return true;
+    }
+
     // check the user logged In or not
     function checkIsUserLogged(address _address) public view returns (bool) {
         return (user[_address].isUserLoggedIn);

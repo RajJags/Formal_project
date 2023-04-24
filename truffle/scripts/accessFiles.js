@@ -7,12 +7,12 @@ const downloadFile = require('./cloudstorage.js');
 
 const resContract = new web3.eth.Contract(
     resContractJson.abi,
-    "0xC3FB71fE8cA687fd6a5bf1aE66eB29dBB1fEcc6a"
+    "0xA7395d312f1b9258b1FaD9C26d27947D10AafF63"
 );
 
 const token = process.argv[2];
 
-resContract.methods.AccessFiles("0x809DbEa3428a23889E9C03D20D631711b2EbC1ED").call()
+resContract.methods.AccessFiles("0x68F73dDD106896fE876B265406FB6d95Fd843e92").call()
     .then(function (files) {
         console.log(files);
     })
@@ -30,6 +30,3 @@ resContract.methods.AccessFiles("0x809DbEa3428a23889E9C03D20D631711b2EbC1ED").ca
             console.log(error);
         }));
 
-const localFilePath = '../../client/Files/access.txt';
-
-downloadFile.downloadFileFromBlobStorage("text", localFilePath);
