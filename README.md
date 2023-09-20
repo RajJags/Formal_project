@@ -9,22 +9,6 @@ To get started, you'll need to clone our project repository to your local machin
 
 ```shell
 git clone <repository_url>
-
-Certainly! Here's the README content in Markdown format:
-
-markdown
-Copy code
-# Project Setup and Usage Guide
-
-Welcome to our project! This guide will walk you through the steps to clone, set up, and use our application effectively.
-
-## Getting Started
-
-### Clone the Project
-To get started, you'll need to clone our project repository to your local machine. Open your terminal and run the following command:
-
-```shell
-git clone <repository_url>
 Server Setup
 Navigate to the truffle/scripts directory in your terminal.
 Start the server by running the following command:
