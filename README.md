@@ -1,46 +1,35 @@
-# Project Setup and Usage Guide
+1. **Clone the Project:**
+   - Start by cloning the project.
 
-Welcome to our project! This guide will walk you through the steps to clone, set up, and use our application effectively.
+2. **Open Terminal and Navigate to Truffle Scripts:**
+   - Open your terminal and navigate to the `truffle/scripts` directory.
 
-## Getting Started
+3. **Start the Server:**
+   - To start the server, use the following command:
+     ```
+     node server.js
+     ```
 
-### Clone the Project
-To get started, you'll need to clone our project repository to your local machine. Open your terminal and run the following command:
+4. **Start Ganache:**
+   - Launch Ganache, and open a new project by selecting the Truffle config file in the project folder.
 
-```shell
-git clone <repository_url>
-Server Setup
-Navigate to the truffle/scripts directory in your terminal.
-Start the server by running the following command:
-shell
-Copy code
-node server.js
-Ganache and Truffle Configuration
-Start Ganache, a personal blockchain for Ethereum development.
-Open a new project in Truffle, using the configuration file located in the project's root folder.
-Client Setup
-Return to the main project folder using the cd command.
-Navigate to the client directory by running:
-shell
-Copy code
-cd client
-Start the website by running:
-shell
-Copy code
-npm start
-Exploring the Application
-With the project fully set up, you can now explore and interact with the application. The following steps will guide you through the process:
+5. **Navigate to the Client Directory:**
+   - Return to the main project folder and navigate to the `client` directory using the following command:
+     ```
+     cd client
+     ```
 
-Experiment with Options: Interact with the various features and options available on the website.
+6. **Start the Website:**
+   - Start the website by running the following command:
+     ```
+     npm start
+     ```
 
-Backend Monitoring: You can monitor the backend's activity and transactions by opening the browser's developer tools and navigating to the console tab (Inspect -> Console).
+7. **Experiment with Backend:**
+   - Explore different options and observe how the backend functions. You can do this by opening the browser's developer tools and navigating to `Inspect -> Console`.
 
-Transaction Tracking: Whenever you complete a transaction on the website, you will see the transaction details in the console.
+8. **Transaction Logging:**
+   - After completing a transaction, the transaction details will be displayed in the console.
 
-User Authentication: After logging in, a JWT (JSON Web Token) will be generated. This token is essential for accessing certain files or secured features of the application.
-
-Conclusion
-You are now ready to use our project! If you have any questions or encounter any issues, please refer to our documentation or reach out to our support team for assistance.
-
-Happy exploring and enjoy using our application!
-
+9. **JWT Token Generation:**
+   - When you log in, a JWT (JSON Web Token) will be generated. You can use this token to access the files or perform authorized actions.
